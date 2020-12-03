@@ -1,6 +1,6 @@
 map = []
 
-File.readlines('trees.txt').each do |line|
+File.readlines('3.txt').each do |line|
   map.push line.strip.each_char.to_a
 end
 
@@ -33,6 +33,7 @@ patterns = [
 ]
 
 def part_two(map, patterns)
+  # TODO: there is definitely a way to do this in one line
   x = 1
   patterns.each do |pattern|
     x = x * part_one(map, right: pattern[:right], down: pattern[:down])

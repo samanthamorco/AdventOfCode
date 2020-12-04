@@ -1,4 +1,4 @@
-inputs = File.readlines('2.txt').map!(&:split)
+inputs = File.readlines('../puzzles/2.txt').map!(&:split)
 
 def part1(inputs)
   valid_passwords = 0

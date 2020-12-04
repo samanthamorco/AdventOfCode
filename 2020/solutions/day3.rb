@@ -1,6 +1,6 @@
 map = []
 
-File.readlines('3.txt').each do |line|
+File.readlines('../puzzles/3.txt').each do |line|
   map.push line.strip.each_char.to_a
 end
 

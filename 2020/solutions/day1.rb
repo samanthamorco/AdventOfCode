@@ -1,4 +1,4 @@
-nums = File.readlines('1.txt').map!(&:to_i)
+nums = File.readlines('../puzzles/1.txt').map!(&:to_i)
 
 def part_1(nums)
   nums.each do |num|

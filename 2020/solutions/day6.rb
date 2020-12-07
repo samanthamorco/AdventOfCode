@@ -9,13 +9,7 @@ def part_two(file)
     members = group.split
     count = {}
     members.each do |member|
-      member.chars.each do |char|
-        if count[char]
-          count[char] += 1
-        else
-          count[char] = 1
-        end
-      end
+      member.chars { |char| count[char] ? count[char] += 1 : count[char] = 1 }
     end
 
     count.select { |_, v| v == members.size }.keys.count
